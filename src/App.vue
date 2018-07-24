@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Wij zijn 30 enthousiastelingen die willen werken aan jouw online succes</h1>
+    <p>Eerste alinea met tekst</p>
+    <h2>Online succes</h2>
+    <p>Online succes alinea met tekst</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import WebFont from 'webfontloader';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+      name: 'app',
+      mounted() {
+          WebFont.load({
+              google: {
+                  families: ['Droid Sans', 'Droid Serif']
+              }
+          });
+      }
   }
-}
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #000;
   margin-top: 60px;
 }
 </style>
