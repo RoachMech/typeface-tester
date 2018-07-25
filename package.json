@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages"
   },
   "dependencies": {
     "vue": "^2.5.16",
+    "vue-gh-pages": "^1.16.3",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -23,5 +25,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "homepage": "git@github.com:RoachMech/typeface-tester"
 }
