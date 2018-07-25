@@ -2,15 +2,31 @@
     <div class="typeface-loader">
         <select v-model="currentTypeface">
             <option>sans-serif</option>
-            <optgroup label="Google Fonts">
-                <option>Droid Sans</option>
-                <option>Droid Serif</option>
-            </optgroup>
             <optgroup label="Typekit">
                 <option>omnes-pro</option>
                 <option>azo-sans-web</option>
                 <option>nimbus-sans</option>
                 <option>halyard-display</option>
+                <option>niveau-grotesk</option>
+                <option>rucksack</option>
+                <option>usual</option>
+                <option>filson-pro</option>
+                <option>canada-type-gibson</option>
+                <option>semplicitapro</option>
+                <option>effra</option>
+                <option>soleil</option>
+                <option>europa</option>
+                <option>faricy-new-web</option>
+                <option>sofia-pro</option>
+                <option>interface</option>
+                <option>p22-underground</option>
+                <option>adrianna</option>
+                <option>report</option>
+                <option>montserrat</option>
+                <option>puritan</option>
+                <option>new-cicle</option>
+                <option>dulcian-normal</option>
+                <option>como</option>
             </optgroup>
         </select>
     </div>
