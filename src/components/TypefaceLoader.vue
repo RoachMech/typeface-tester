@@ -1,6 +1,6 @@
 <template>
     <div class="typeface-loader">
-        <select v-model="currentTypeface">
+        <select v-model="currentTypeface" class="typeface-loader__select">
             <option>sans-serif</option>
             <optgroup label="Typekit">
                 <option>omnes-pro</option>
@@ -27,6 +27,14 @@
                 <option>new-cicle</option>
                 <option>dulcian-normal</option>
                 <option>como</option>
+                <option>quiet-sans</option>
+                <option>graphie</option>
+                <option>work-sans</option>
+                <option>poppins</option>
+                <option>cresta</option>
+                <option>quasimoda</option>
+                <option>questa-sans</option>
+                <option>circe</option>
             </optgroup>
         </select>
     </div>
@@ -67,5 +75,7 @@
 </script>
 
 <style lang="scss">
-
+    .typeface-loader__select {
+        font-size: 16px;
+    }
 </style>
