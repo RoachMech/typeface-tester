@@ -23,10 +23,6 @@
 </script>
 
 <style lang="scss">
-    html {
-        font-size: 20px;
-    }
-
     body {
         padding: 0;
         margin: 0;

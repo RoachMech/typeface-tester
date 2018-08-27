@@ -1,42 +1,12 @@
 <template>
     <div class="typeface-loader">
+        <button type="button" @click="previousTypeface"> &laquo; </button>
         <select v-model="currentTypeface" class="typeface-loader__select">
-            <option>sans-serif</option>
-            <optgroup label="Typekit">
-                <option>omnes-pro</option>
-                <option>azo-sans-web</option>
-                <option>nimbus-sans</option>
-                <option>halyard-display</option>
-                <option>niveau-grotesk</option>
-                <option>rucksack</option>
-                <option>usual</option>
-                <option>filson-pro</option>
-                <option>canada-type-gibson</option>
-                <option>semplicitapro</option>
-                <option>effra</option>
-                <option>soleil</option>
-                <option>europa</option>
-                <option>faricy-new-web</option>
-                <option>sofia-pro</option>
-                <option>interface</option>
-                <option>p22-underground</option>
-                <option>adrianna</option>
-                <option>report</option>
-                <option>montserrat</option>
-                <option>puritan</option>
-                <option>new-cicle</option>
-                <option>dulcian-normal</option>
-                <option>como</option>
-                <option>quiet-sans</option>
-                <option>graphie</option>
-                <option>work-sans</option>
-                <option>poppins</option>
-                <option>cresta</option>
-                <option>quasimoda</option>
-                <option>questa-sans</option>
-                <option>circe</option>
-            </optgroup>
+            <option v-for="typeface in typefaces" v-bind:key="typeface">
+                {{ typeface }}
+            </option>
         </select>
+        <button type="button" @click="nextTypeface"> &raquo; </button>
     </div>
 </template>
 
@@ -49,6 +19,42 @@
         data() {
             return {
                 currentTypeface: 'sans-serif',
+                typefaces: [
+                    'sans-serif',
+                    'omnes-pro',
+                    'azo-sans-web',
+                    'nimbus-sans',
+                    'halyard-display',
+                    'niveau-grotesk',
+                    'rucksack',
+                    'usual',
+                    'filson-pro',
+                    'canada-type-gibson',
+                    'semplicitapro',
+                    'effra',
+                    'soleil',
+                    'europa',
+                    'faricy-new-web',
+                    'sofia-pro',
+                    'interface',
+                    'p22-underground',
+                    'adrianna',
+                    'report',
+                    'montserrat',
+                    'puritan',
+                    'new-cicle',
+                    'dulcian-normal',
+                    'como',
+                    'quiet-sans',
+                    'graphie',
+                    'work-sans',
+                    'poppins',
+                    'cresta',
+                    'quasimoda',
+                    'questa-sans',
+                    'circe',
+                    'Source Sans Pro'
+                ],
             }
         },
 
@@ -64,17 +70,41 @@
         mounted() {
             WebFont.load({
                 google: {
-                    families: ['Droid Sans', 'Droid Serif']
+                    families: ['Source Sans Pro:400,900']
                 },
                 typekit: {
                     id: 'cxc7iyz',
                 }
             });
         },
+
+        methods: {
+            nextTypeface() {
+                const index = this.typefaces.indexOf(this.currentTypeface);
+
+                if (index >= 0 && index < this.typefaces.length - 1) {
+                    this.currentTypeface = this.typefaces[index + 1];
+                }
+            },
+
+            previousTypeface() {
+                const index = this.typefaces.indexOf(this.currentTypeface);
+
+                if (index >= 1) {
+                    this.currentTypeface = this.typefaces[index - 1];
+                }
+            }
+        }
     }
 </script>
 
 <style lang="scss">
+    .typeface-loader {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
     .typeface-loader__select {
         font-size: 16px;
     }
