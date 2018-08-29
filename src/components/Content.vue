@@ -90,6 +90,43 @@
                     een heerlijke lunch.</p>
             </div>
         </section>
+        <section class="full-menu">
+            <ul>
+                <li>Portfolio</li>
+                <li>Wat we doen</li>
+                <li>Over ons</li>
+                <li>Blog</li>
+                <li>Werken bij</li>
+            </ul>
+        </section>
+        <section class="full-menu full-menu--inverted">
+            <ul>
+                <li>Portfolio</li>
+                <li>Wat we doen</li>
+                <li>Over ons</li>
+                <li>Blog</li>
+                <li>Werken bij</li>
+            </ul>
+        </section>
+        <section class="full-menu full-menu--primary">
+            <ul>
+                <li>Portfolio</li>
+                <li>Wat we doen</li>
+                <li>Over ons</li>
+                <li>Blog</li>
+                <li>Werken bij</li>
+            </ul>
+        </section>
+
+        <section class="full-menu full-menu--secondary">
+            <ul>
+                <li>Portfolio</li>
+                <li>Wat we doen</li>
+                <li>Over ons</li>
+                <li>Blog</li>
+                <li>Werken bij</li>
+            </ul>
+        </section>
     </div>
 </template>
 
@@ -101,6 +138,9 @@
 
 <style lang="scss">
     :root {
+        --color-primary: #C62A2A;
+        --color-secondary: #5EA7C1;
+
         /* set base values */
         --text-base-size: 1.125em;
         --text-scale-ratio: 1.125;
@@ -198,12 +238,12 @@
     }
 
     .brand-primary {
-        background-color: #C62A2A;
+        background-color: var(--color-primary);
         color: white;
     }
 
     .brand-secondary {
-        background-color: #5EA7C1;
+        background-color: var(--color-secondary);
         color: white;
     }
 
@@ -215,5 +255,40 @@
 
     .header {
         padding: var(--space-xxl) 1rem;
+    }
+
+    .full-menu {
+        align-items: center;
+        display: flex;
+        height: 110vh;
+        justify-content: center;
+
+        &--inverted {
+             background-color: black;
+             color: white;
+         }
+
+        &--primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        &--secondary {
+            background-color: var(--color-secondary);
+            color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            font-size: var(--text-xl);
+            font-weight: bold;
+            margin: var(--space-md) 0;
+            text-transform: uppercase;
+        }
     }
 </style>
