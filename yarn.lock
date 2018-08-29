@@ -6141,6 +6141,10 @@ schema-utils@^0.4.0, schema-utils@^0.4.2, schema-utils@^0.4.3, schema-utils@^0.4
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
+scrolldir@^1.2.25:
+  version "1.2.25"
+  resolved "https://registry.yarnpkg.com/scrolldir/-/scrolldir-1.2.25.tgz#12b01c8840161f6f42282aec445227de9addd3f1"
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"

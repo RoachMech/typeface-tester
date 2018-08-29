@@ -39,8 +39,11 @@
         display: flex;
         height: 3rem;
         padding: 0 1rem;
-        position: sticky;
         top: 0;
+
+        [data-scrolldir="up"] & {
+            position: sticky;
+        }
     }
 
 </style>

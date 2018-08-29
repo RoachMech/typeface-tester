@@ -41,9 +41,9 @@
                     'adrianna',
                     'report',
                     'montserrat',
-                    'puritan',
-                    'new-cicle',
-                    'dulcian-normal',
+                    // 'puritan',
+                    // 'new-cicle',
+                    // 'dulcian-normal',
                     'como',
                     'quiet-sans',
                     'graphie',
@@ -74,6 +74,15 @@
                 },
                 typekit: {
                     id: 'cxc7iyz',
+                }
+            });
+
+            window.addEventListener('keyup', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    this.previousTypeface();
+                }
+                if (e.key === 'ArrowRight') {
+                    this.nextTypeface();
                 }
             });
         },

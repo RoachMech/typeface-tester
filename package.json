@@ -9,6 +9,7 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages"
   },
   "dependencies": {
+    "scrolldir": "^1.2.25",
     "vue": "^2.5.16",
     "vue-gh-pages": "^1.16.3",
     "webfontloader": "^1.6.28"
