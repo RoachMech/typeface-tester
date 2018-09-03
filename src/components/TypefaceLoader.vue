@@ -18,7 +18,7 @@
 
         data() {
             return {
-                currentTypeface: 'sans-serif',
+                currentTypeface: 'niveau-grotesk',
                 typefaces: [
                     'niveau-grotesk',
                     'rucksack',
