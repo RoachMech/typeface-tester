@@ -20,40 +20,10 @@
             return {
                 currentTypeface: 'sans-serif',
                 typefaces: [
-                    'sans-serif',
-                    'omnes-pro',
-                    'azo-sans-web',
-                    'nimbus-sans',
-                    'halyard-display',
                     'niveau-grotesk',
                     'rucksack',
-                    'usual',
-                    'filson-pro',
-                    'canada-type-gibson',
-                    'semplicitapro',
-                    'effra',
                     'soleil',
-                    'europa',
-                    'faricy-new-web',
-                    'sofia-pro',
-                    'interface',
-                    'p22-underground',
-                    'adrianna',
-                    'report',
-                    'montserrat',
-                    // 'puritan',
-                    // 'new-cicle',
-                    // 'dulcian-normal',
-                    'como',
-                    'quiet-sans',
-                    'graphie',
-                    'work-sans',
                     'poppins',
-                    'cresta',
-                    'quasimoda',
-                    'questa-sans',
-                    'circe',
-                    'Source Sans Pro'
                 ],
             }
         },
@@ -69,9 +39,6 @@
 
         mounted() {
             WebFont.load({
-                google: {
-                    families: ['Source Sans Pro:400,900']
-                },
                 typekit: {
                     id: 'cxc7iyz',
                 }
